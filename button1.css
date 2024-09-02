@@ -1,18 +1,3 @@
-/*.btn::before{
-    animation: rotate 2s infinite linear;
-    filter: blur(20px);
-}
-
-.btn.btnlnner{
-    position: relative;
-    display: flex;
-    width: 100%;
-    z-index: 1;
-    transition: all 0.18s ease;
-    backdrop-filter: blur(40px);
-    backface-visibility: hidden;
-}*/
-
 .btn {
     position: relative;
     display: inline-block;
