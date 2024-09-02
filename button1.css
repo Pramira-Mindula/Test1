@@ -1,0 +1,56 @@
+/*.btn::before{
+    animation: rotate 2s infinite linear;
+    filter: blur(20px);
+}
+
+.btn.btnlnner{
+    position: relative;
+    display: flex;
+    width: 100%;
+    z-index: 1;
+    transition: all 0.18s ease;
+    backdrop-filter: blur(40px);
+    backface-visibility: hidden;
+}*/
+
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2), transparent 70%);
+    animation: rotate 2s infinite linear;
+    filter: blur(20px);
+    z-index: 0;
+}
+
+.btn-inner {
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(40px);
+    transition: all 0.18s ease;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
